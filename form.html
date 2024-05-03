@@ -31,7 +31,14 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
         import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
         
-        const firebaseConfig = "${{ secrets.FIREBASE_CONFIG_BASE64 }}"
+        const firebaseConfig = {
+            apiKey: "${{ secrets.API_KEY_FIREBASE }}",
+            authDomain: "pin-up-board.firebaseapp.com",
+            projectId: "pin-up-board",
+            storageBucket: "pin-up-board.appspot.com",
+            messagingSenderId: "932375513809",
+            appId: "1:932375513809:web:cb9817b4dd76ef5ba893f0"
+        };
         // Initialize Firebase app
         const app = initializeApp(firebaseConfig);
 
