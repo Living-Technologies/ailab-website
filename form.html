@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Issue</title>
+    <link rel="stylesheet" href="minimalist.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <a href="index.html">Home Page</a> <!-- Navigation link to forms.html -->
+        <a href="https://github.com/Living-Technologies">GitHub page</a>
+    </div>
+    <div class="content">
+        <h1>Add Item to Backlog</h1>
+        <form id="addItemForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="itemName">Title Issue:</label>
+            <input type="text" id="itemName" name="itemName" required><br>
+            <label for="itemDescription">Description:</label><br>
+            <textarea id="itemDescription" name="itemDescription" required></textarea><br>
+            <button type="submit" id="addItemButton">Add Item</button>
+        </form>
+        <div id="confirmationMessage" style="display:none;">Item added successfully!</div>
+    </div>
+
+    <script type="module">
+        // Firebase configuration
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+        
+        const firebaseConfig = JSON.parse(atob("${{ secrets.FIREBASE_CONFIG }}"));
+
+        // Initialize Firebase app
+        const app = initializeApp(firebaseConfig);
+
+        // Initialize Firestore
+        const firestore = getFirestore();
+
+        // Check if the Firebase connection is successful
+        if (app) {
+          console.log("Database connection successful!");
+        } else {
+          console.error("Error initializing Firebase");
+        }
+
+        // Reference to Firestore collection "issues"
+        const issuesCollection = collection(firestore, 'issues');
+
+        // Adding a new document to the collection when "Add Item" button is pressed
+        const addItemForm = document.getElementById('addItemForm');
+        const addItemButton = document.getElementById('addItemButton');
+        const confirmationMessage = document.getElementById('confirmationMessage');
+
+        addItemForm.addEventListener('submit', async (event) => {
+          event.preventDefault(); // Prevent default form submission
+
+          const itemName = addItemForm.itemName.value;
+          const name = addItemForm.name.value;
+          const itemDescription = addItemForm.itemDescription.value;
+
+          // Check if all fields are filled
+          if (!name.trim() || !itemName.trim() || !itemDescription.trim()) {
+            alert('Please fill in all fields.');
+            return;
+          }
+
+          // Add the new document to the collection
+          try {
+            // Add the new document to the collection
+            const docRef = await addDoc(issuesCollection, {
+              assigned_by: name, 
+              title: itemName,
+              description: itemDescription
+            });
+
+            console.log("Document added with ID: ", docRef.id);
+            confirmationMessage.style.display = 'block'; // Show confirmation message
+            addItemForm.reset(); // Clear form fields
+          } catch (error) {
+            console.error("Error adding document: ", error);
+            // Handle error - display error message to the user, etc.
+          }
+        });
+    </script>
+</body>
+</html>

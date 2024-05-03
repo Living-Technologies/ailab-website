@@ -1,17 +1,1 @@
 theme: jekyll-theme-minimal
-
-sidebar:
-  title: "Links"
-  nav: sidebar-sample
-
-sidebar-sample:
-  - title: "Navigation"
-    children:
-      - title: "Submit Issue"
-        url: /index.html
-      - title: "Child Page A2"
-        url: /
-      - title: "Child Page A3"
-        url: /
-      - title: "Child Page A4"
-        url: /
