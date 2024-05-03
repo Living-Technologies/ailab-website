@@ -31,8 +31,7 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
         import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
         
-        const firebaseConfig = JSON.parse(atob("${{ secrets.FIREBASE_CONFIG }}"));
-
+        const firebaseConfig = JSON.parse(atob("${{ secrets.FIREBASECONFIG_ENC }}"));
         // Initialize Firebase app
         const app = initializeApp(firebaseConfig);
 
