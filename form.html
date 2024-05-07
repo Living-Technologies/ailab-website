@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,12 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+  <div id="navbar">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="team.html">Team</a>
+    <a href="contact.html">Contact</a>
+</div>
     <!-- Landing Section -->
     <section id="landing">
       <img src="https://beekmanlab.org/images/respic/celldiseasemodelling.png" alt="Background Image" id="bgImage">
@@ -55,6 +62,7 @@
       </div>
   </footer>
 
+  
     <script type="module">
         // Firebase configuration
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
@@ -120,5 +128,47 @@
           }
         });
     </script>
+    <!-- <script type="module">
+      const addItemForm = document.getElementById('addItemForm');
+      const addItemButton = document.getElementById('addItemButton');
+      const confirmationMessage = document.getElementById('confirmationMessage');
+
+      addItemForm.addEventListener('submit', async (event) => {
+        event.preventDefault(); // Prevent default form submission
+
+        const itemName = addItemForm.itemName.value;
+        const name = addItemForm.name.value;
+        const itemDescription = addItemForm.itemDescription.value;
+      
+        const projectId = "${{ secrets.PROJECT_ID }}";
+        const accessToken = "${{ secrets.OATH }}";
+
+        const mutationQuery = `
+          mutation {
+            addProjectV2DraftIssue(input: {
+              projectId: "${projectId}",
+              title: "${itemName}",
+              body: "${itemDescription}"
+            }) {
+              projectItem {
+                id
+              }
+            }
+          }
+        `;
+
+        fetch('https://api.github.com/graphql', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${accessToken}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ query: mutationQuery })
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+      });
+  </script> -->
 </body>
 </html>

@@ -1,31 +1,10 @@
-// // Add item to backlog when form is submitted
-// document.getElementById('addItemForm').addEventListener('submit', async function(event) {
-//     event.preventDefault(); // Prevent default form submission
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
 
-//     const itemName = document.getElementById('itemName').value;
-//     const itemDescription = document.getElementById('itemDescription').value;
-
-//     try {
-//         const response = await fetch('https://api.github.com/repos/your-username/AI-Pin-Up-Board/issues', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//                 'Authorization': 'Bearer YOUR_ACCESS_TOKEN'
-//             },
-//             body: JSON.stringify({
-//                 title: itemName,
-//                 body: itemDescription
-//             })
-//         });
-
-//         if (response.ok) {
-//             document.getElementById('addItemForm').reset(); // Clear form inputs
-//             document.getElementById('confirmationMessage').style.display = 'block'; // Show confirmation message
-//         } else {
-//             alert('Failed to add item. Please try again later.');
-//         }
-//     } catch (error) {
-//         console.error('Error:', error);
-//         alert('Failed to add item. Please try again later.');
-//     }
-// });
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
