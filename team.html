@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lab Living Technologies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add this CSS to your existing styles */
+        .product-card {
+            max-width: 300px; /* Set maximum width for product cards */
+            height: 260px;
+            margin-bottom: 20px; /* Add some space between product cards */
+        }
+
+        .product-info p:last-child {
+            font-style: italic;
+            color: #808080; /* Grey color */
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Landing Section -->
+    <section id="landing">
+        <video autoplay muted loop id="bgVideo">
+            <source src="images/h2b.mp4"
+                type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="landing-content">
+            <img id="company-logo"
+                src="images/ai-logo.png"
+                alt="AI Lab Living Technologies Logo">
+            <h1>AI Lab Living Technologies</h1>
+            <p>Accelerating Biofabrication and Disease Modelling</p>
+        </div>
+    </section>
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Our Team Members</h2>
+        <div class="products-grid">
+            <div class="product-card" id="sam_vb">
+                <img src="https://beekmanlab.org/images/teampic/samvanbeuningen.jpg"
+                    alt="Sam van Beuningen">
+                <div class="product-info">
+                    <p>Sam van Beuningen</p>
+                    <p>Senior Postdoctoral Data Scientist</p>
+                </div>
+            </div>
+            <div class="product-card" id="matt_s">
+                <img src="https://media.licdn.com/dms/image/D4E03AQGM97E2MXdgZQ/profile-displayphoto-shrink_200_200/0/1673268743407?e=2147483647&v=beta&t=RDtCuz8BwWWfdU4g3mE-BFm9_7tYE1KpASyIlsJDJOI"
+                    alt="Matthew B. Smith">
+                <div class="product-info">
+                    <p>Matthew B. Smith</p>
+                    <p>Postdoctoral Researcher</p>
+                </div>
+            </div>
+            <div class="product-card" id="roos-anne_s">
+                <img src="https://media.licdn.com/dms/image/D4E03AQGY1h5qk1KdKA/profile-displayphoto-shrink_400_400/0/1683791527925?e=1720656000&v=beta&t=mIqgl9y8w-VRyKO8Gu-p5d1HfET0S-RlVrXn7fkf6Hk"
+                    alt="Roos-Anne Samsom">
+                <div class="product-info">
+                    <p>Roos-Anne Samsom</p>
+                    <p>Research Laboratory Technician</p>
+                </div>
+            </div>
+            <div class="product-card" id="bram_b">
+                <img src="https://media.licdn.com/dms/image/C5603AQG_fOkUlH208A/profile-displayphoto-shrink_200_200/0/1633952537866?e=2147483647&v=beta&t=8-sj18GJiLLQKA6gvFQOo211GLvIwDaWtMA6t4uQ8ck"
+                    alt="Bram Bosch">
+                <div class="product-info">
+                    <p>Bram Bosch</p>
+                    <p>PhD Candidate</p>
+                </div>
+            </div>
+            <div class="product-card" id="krijn_vds">
+                <img src="https://media.licdn.com/dms/image/C4E03AQHimUtrrtBYuQ/profile-displayphoto-shrink_200_200/0/1614289803715?e=2147483647&v=beta&t=-G5us70FXybWl1YEK166JIiskxwmshiPvMWJYAaz8Pk"
+                    alt="Krijn van der Steen">
+                <div class="product-info">
+                    <p>Krijn van der Steen</p>
+                    <p>Master's Thesis Candidate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div id="social-links">
+            <a href="https://www.umcutrecht.nl/en/ai-lab-for-living-technologies"><img
+                    src="images/umcu.png"
+                    alt="UMC Utrecht"></a>
+            <a href="https://github.com/Living-Technologies"><img
+                    src="images/github-white-trans.png"
+                    alt="GitHub"></a>
+            <a href="https://www.google.com/maps/place/Uppsalalaan+8,+3584+CT+Utrecht"><img
+                    src="images/location-white.png"
+                    alt="Location"></a>
+        </div>
+    </footer>
+</body>
+</html>

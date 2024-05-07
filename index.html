@@ -3,28 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collaboration Pin-Up Board</title>
-    <link rel="stylesheet" href="minimalist.css">
+    <title>AI Lab Living Technologies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-<!-- Sidebar navigation -->
-<div class="sidebar">
-    <h2>Navigation</h2>
-    <a href="form.html">Upload Issue</a> <!-- Navigation link to forms.html -->
-    <a href="https://github.com/Living-Technologies">GitHub page</a>
-</div>
-
-<!-- Content -->
-<div class="content">
-    <h1 id="collaboration-pin-up-board">Collaboration Pin-Up Board</h1>
-    <p>Welcome to this collaboration space!</p>
-    <p>In daily practice, we see a lot of work being done that might easily be automated. However, there is not a clear list of the issues that are being faced in practice.</p>
-    <p>To make this insightful, we have designed this space for you to post issues you are dealing with, that might be relieved by the use of automation.</p>
-    <p>These issues will be uploaded for developers to review, figure out if they can easily be solved by automation, and implement these. This process will be done by staying in direct contact with you, to ensure that these problems are dealt with correctly!</p>
-    <p>This will not only save you time now but will make this task much easier and quicker to perform after this occurrence as well! Another pro of this approach is that you can rely on a task being performed in the same way in the future as well.</p>
-    <p>What we ask is that you upload a short title of your problem, think of 3-5 words and a more detailed problem description. If you have images or videos that outline this problem, please upload them to improve our understanding!</p>
-    <p>A way of looking at this project is that you are putting digital <em>post-its</em> on our wall, and that we will try and solve them.</p>
-    <p><img src="https://github.com/Living-Technologies/AI-Collaboration/assets/33161457/b4d36160-6912-4f2c-aa98-7f6fc1a58e41" alt="workflow"></p>
-</div>
-
+<body>
+    <!-- Landing Section -->
+    <section id="landing">
+        <video autoplay muted loop id="bgVideo">
+            <source src="images/banner.mp4"
+                type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="landing-content">
+            <img id="company-logo"
+                src="images/ai-logo.png"
+                alt="AI Lab Living Technologies Logo">
+            <h1>AI Lab Living Technologies</h1>
+            <p>Accelerating Biofabrication and Disease Modelling</p>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We at AI Lab for Living Technologies are paving the way to interact with physical data in the digital realm.</p>
+        <p>This work is done by multiple AI Labs, constituded by the UMC Utrecht, aiming to automize, and revolutionize our current healthcare.</p>
+    </section>
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Navigation</h2>
+        <div class="products-grid">
+            <a href="form.html" class="product-card" id="product3" style="text-decoration:none;">
+                <img src="images\collab.png"
+                    alt="Collaborate">
+                <p>Collaborate</p>
+            </a>
+            <div class="product-card" id="product2">
+                <img src="images\research.png"
+                    alt="Research">
+                <p>Research</p>
+            </div>
+            <a href="team.html" class="product-card" id="product3" style="text-decoration:none;">
+                <img src="images\team.png" alt="Team Members">
+                <p>Team</p>
+            </a>
+            <a href="contact.html" class="product-card" id="product3" style="text-decoration:none;">
+                <img src="images\contact.png" alt="Contact">
+                <p>Contact</p>
+            </a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div id="social-links">
+            <a href="https://www.umcutrecht.nl/en/ai-lab-for-living-technologies"><img
+                    src="images/umcu.png"
+                    alt="UMC Utrecht"></a>
+            <a href="https://github.com/Living-Technologies"><img
+                    src="images/github-white-trans.png"
+                    alt="GitHub"></a>
+            <a href="https://www.google.com/maps/place/Uppsalalaan+8,+3584+CT+Utrecht"><img
+                    src="images/location-white.png"
+                    alt="Location"></a>
+        </div>
+    </footer>
 </body>
 </html>

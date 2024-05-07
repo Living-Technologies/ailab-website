@@ -3,28 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Issue</title>
-    <link rel="stylesheet" href="minimalist.css">
+    <title>AI Lab Living Technologies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="sidebar">
-        <h2>Navigation</h2>
-        <a href="index.html">Home Page</a> <!-- Navigation link to forms.html -->
-        <a href="https://github.com/Living-Technologies">GitHub page</a>
-    </div>
-    <div class="content">
-        <h1>Add Item to Backlog</h1>
-        <form id="addItemForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
-            <label for="itemName">Title Issue:</label>
-            <input type="text" id="itemName" name="itemName" required><br>
-            <label for="itemDescription">Description:</label><br>
-            <textarea id="itemDescription" name="itemDescription" required></textarea><br>
-            <button type="submit" id="addItemButton">Add Item</button>
-        </form>
-        <div id="confirmationMessage" style="display:none;">Item added successfully!</div>
-    </div>
+    <!-- Landing Section -->
+    <section id="landing">
+      <img src="https://beekmanlab.org/images/respic/celldiseasemodelling.png" alt="Background Image" id="bgImage">
+        <div class="landing-content">
+            <img id="company-logo"
+                src="images/ai-logo.png"
+                alt="AI Lab Living Technologies Logo">
+            <h1>AI Lab Living Technologies</h1>
+            <p>Accelerating Biofabrication and Disease Modelling</p>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="collaboration-board">
+      <div class="left-content-60">
+          <h2>Collaboration Pin-Up Board</h2>
+          <p>Welcome to this collaboration space!</p>
+          <p>In daily practice, we see a lot of work being done that might easily be automated. However, there is not a clear list of the issues that are being faced in practice.</p>
+          <p>To make this insightful, we have designed this space for you to post issues you are dealing with, that might be relieved by the use of automation.</p>
+          <p>These issues will be uploaded for developers to review, figure out if they can easily be solved by automation, and implement these. This process will be done by staying in direct contact with you, to ensure that these problems are dealt with correctly!</p>
+          <p>This will not only save you time now but will make this task much easier and quicker to perform after this occurrence as well! Another pro of this approach is that you can rely on a task being performed in the same way in the future as well.</p>
+          <p>What we ask is that you upload a short title of your problem, think of 3-5 words and a more detailed problem description. If you have images or videos that outline this problem, please upload them to improve our understanding!</p>
+          <p>A way of looking at this project is that you are putting digital <em>post-its</em> on our wall, and that we will try and solve them.</p>
+      </div>
+      <div class="right-content-30">
+          <h2>Add Item to Backlog</h2>
+          <form id="addItemForm">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required><br>
+              <label for="itemName">Title Issue:</label>
+              <input type="text" id="itemName" name="itemName" required><br>
+              <label for="itemDescription">Description:</label><br>
+              <textarea id="itemDescription" name="itemDescription" required></textarea><br>
+              <button type="submit" id="addItemButton">Add Item</button>
+          </form>
+          <div id="confirmationMessage" style="display:none;">Item added successfully!</div>
+      </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+      <div id="social-links">
+          <a href="https://www.umcutrecht.nl/en/ai-lab-for-living-technologies"><img src="images/umcu.png" alt="UMC Utrecht"></a>
+          <a href="https://github.com/Living-Technologies"><img src="images/github-white-trans.png" alt="GitHub"></a>
+          <a href="https://www.google.com/maps/place/Uppsalalaan+8,+3584+CT+Utrecht"><img src="images/location-white.png" alt="Location"></a>
+      </div>
+  </footer>
 
     <script type="module">
         // Firebase configuration
