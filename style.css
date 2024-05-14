@@ -19,6 +19,8 @@ body {
     position: relative;
     z-index: 1;
     text-align: center;
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 #bgVideo {
@@ -278,7 +280,8 @@ footer {
     top: -50px;
     width: 100%;
     display: block;
-    transition: top 0.3s;
+    transition: top 0.2s;
+    z-index: 10;
   }
   
   #navbar a {
