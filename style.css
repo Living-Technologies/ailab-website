@@ -57,6 +57,46 @@ body {
     font-style: italic;
 }
 
+.text-above {
+    text-align: left;
+    margin-bottom: 20px;
+    width: 100%; /* Ensure the text-above div spans the entire width */
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 0 20px; /* Add padding to match the padding of other divs */
+  }
+  
+  .text-above h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .text-above p {
+    font-size: 16px;
+    color: #666;
+  }  
+
+.work-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-80%, -50%);
+    z-index: 1;
+    text-align: left;
+    color: #000;
+    text-shadow: 1px 0 0 #fff, 0 -1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff;
+}
+
+.work-title h1 {
+    font-size: 6vh; /* Set the font size to 20% of the viewport height */
+    margin: 0; /* Remove any default margin */
+}
+
+.work-title p {
+    font-size: 3vh; /* Set the font size to 20% of the viewport height */
+    font-style: italic;
+}
+
 #team-image {
     max-height: 30vh; /* Ensure the image doesn't exceed the height of its container */
     max-width: 30vh; /* Ensure the image doesn't exceed the width of its container */
