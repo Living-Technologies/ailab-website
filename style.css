@@ -28,8 +28,10 @@ body {
 
 #team-landing {
     position: relative;
-    padding-left: 15vh;
-    height: 40vh;
+    padding-left: 10vw; 
+    padding-top: 5vh;
+    height: 30vh;
+    width: 90vw; 
     display: flex;
     align-items: center;
     color: #fff;
@@ -48,58 +50,19 @@ body {
 }
 
 .team-title h1 {
-    font-size: 6vh; /* Set the font size to 20% of the viewport height */
+    font-size: 4vh; /* Set the font size to 20% of the viewport height */
     margin: 0; /* Remove any default margin */
 }
 
 .team-title p {
-    font-size: 3vh; /* Set the font size to 20% of the viewport height */
+    font-size: 2vh; /* Set the font size to 20% of the viewport height */
     font-style: italic;
 }
 
-.text-above {
-    text-align: left;
-    margin-bottom: 20px;
-    width: 100%; /* Ensure the text-above div spans the entire width */
-    box-sizing: border-box; /* Include padding and border in the width */
-    padding: 0 20px; /* Add padding to match the padding of other divs */
-  }
-  
-  .text-above h1 {
-    text-align: center;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .text-above p {
-    font-size: 16px;
-    color: #666;
-  }  
-
-.work-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-80%, -50%);
-    z-index: 1;
-    text-align: left;
-    color: #000;
-    text-shadow: 1px 0 0 #fff, 0 -1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff;
-}
-
-.work-title h1 {
-    font-size: 6vh; /* Set the font size to 20% of the viewport height */
-    margin: 0; /* Remove any default margin */
-}
-
-.work-title p {
-    font-size: 3vh; /* Set the font size to 20% of the viewport height */
-    font-style: italic;
-}
 
 #team-image {
-    max-height: 30vh; /* Ensure the image doesn't exceed the height of its container */
-    max-width: 30vh; /* Ensure the image doesn't exceed the width of its container */
+    max-height: 25vh; /* Ensure the image doesn't exceed the height of its container */
+    max-width: 25vw; /* Ensure the image doesn't exceed the width of its container */
     border-radius: 50%; /* Make the image round */
     border: 3px solid #fff; /* Add a white border for better visibility */
     box-shadow: 0 0 3px #000; /* Add shadow for depth */
@@ -132,6 +95,46 @@ body {
 .team-links p {
     margin: 1vh; /* Remove any default margin */
     color: #ff6347;
+}
+
+.text-above {
+    text-align: left;
+    margin-bottom: 2vh;
+    width: 100%; /* Ensure the text-above div spans the entire width */
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 0 2vh; /* Add padding to match the padding of other divs */
+  }
+  
+  .text-above h1 {
+    text-align: center;
+    font-size: 4vh;
+    color: #333;
+  }
+  
+  .text-above p {
+    font-size: 2vh;
+    color: #666;
+  }  
+
+.work-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-80%, -50%);
+    z-index: 1;
+    text-align: left;
+    color: #000;
+    text-shadow: 1px 0 0 #fff, 0 -1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff;
+}
+
+.work-title h1 {
+    font-size: 3vw; /* Set the font size to 20% of the viewport height */
+    margin: 0; /* Remove any default margin */
+}
+
+.work-title p {
+    font-size: 2vw; /* Set the font size to 20% of the viewport height */
+    font-style: italic;
 }
 
 #bgVideo {
@@ -170,7 +173,7 @@ body {
 }
 
 #products {
-    padding: 40px;
+    padding: 10vh, 10vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -277,8 +280,8 @@ footer {
 }
 
 #social-links img {
-    width: 45px;
-    height: 45px;
+    max-width: 45px;
+    max-height: 45px;
     transition: transform 0.3s;
 }
 
@@ -289,20 +292,6 @@ footer {
 #social-links a:nth-child(1) img {
     width: 30px;
     height: 30px;
-}
-
-/* Adjustments to display content side by side */
-#collaboration-board {
-    display: flex;
-    justify-content: space-between;
-}
-
-/* Style for the left content */
-.left-content,
-.right-content {
-    width: calc(50% - 20px); /* Adjust width to leave space for padding and margin */
-    padding: 20px;
-    box-sizing: border-box;
 }
 
 #addItemForm {
@@ -357,11 +346,36 @@ footer {
 }
 
 #collaboration-board {
-    padding: 40px;
+    padding: 5vh 5vw; /* Combined padding property */
+    width: 90vw;
     display: flex;
     flex-wrap: wrap; /* Allow wrapping of flex items */
     justify-content: center; /* Center flex items horizontally */
     background-color: #fff;
+    gap: 20px; /* Space between flex items */
+}
+
+/* Style for the left content and right content */
+.left-content,
+.right-content {
+    flex: 1 1 300px; /* Grow and shrink, with a minimum width of 300px */
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: calc(50% - 20px); /* Adjust max-width for spacing */
+    line-height: 2;
+}
+
+.left-content h2, 
+.right-content h2 {
+    text-align: center;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .left-content,
+    .right-content {
+        flex: 1 1 100%; /* Full width on smaller screens */
+        max-width: 100%; /* Ensure full width */
+    }
 }
 
 .left-content-60 {
@@ -376,21 +390,25 @@ footer {
     box-sizing: border-box;
 }
 
-
-/* Ensure proper spacing between flex items */
-.left-content {
-    margin-right: 20px;
+.responsive-iframe {
+    width: 40vw; /* 80% of the viewport width */
+    height: 45vh; /* 60% of the viewport height */
+    
 }
 
-.right-content {
-    margin-left: 20px;
+/* Optional: Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .responsive-iframe {
+        width: 80vw; /* Full width on smaller screens */
+        height: 30vh; /* Adjust height accordingly */
+    }
 }
 
 #navbar {
     background-color: #333;
     position: fixed;
     top: -50px;
-    width: 100%;
+    width: 100vw;
     display: block;
     transition: top 0.2s;
     z-index: 10;
