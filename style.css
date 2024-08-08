@@ -226,6 +226,7 @@ body {
 
 .products-grid {
     display: grid;
+    padding-bottom: 3vh;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px; /* Adjust the gap as needed */
     width: 100%;
@@ -390,6 +391,31 @@ footer {
     
 }
 
+#navbar {
+    background-color: #333;
+    position: fixed;
+    top: -50px;
+    width: 100vw;
+    display: block;
+    transition: top 0.2s;
+    z-index: 10;
+  }
+  
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  #navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
 /* Optional: Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .responsive-iframe {
@@ -430,29 +456,7 @@ footer {
         max-height: 22vh; /* Ensure the image doesn't exceed the height of its container */
         max-width: 22vw;
     }
+    #navbar {
+        top: -100px;
+    }
 }
-
-#navbar {
-    background-color: #333;
-    position: fixed;
-    top: -50px;
-    width: 100vw;
-    display: block;
-    transition: top 0.2s;
-    z-index: 10;
-  }
-  
-  #navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 15px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  #navbar a:hover {
-    background-color: #ddd;
-    color: black;
-  }
