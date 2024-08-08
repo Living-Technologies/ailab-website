@@ -397,7 +397,9 @@ footer {
         height: 30vh; /* Adjust height accordingly */
     }
     .left-content,
-    .right-content {
+    .right-content,
+    .left-content-60,
+    .right-content-30 {
         flex: 1 1 100%; /* Full width on smaller screens */
         max-width: 100%; /* Ensure full width */
     }
