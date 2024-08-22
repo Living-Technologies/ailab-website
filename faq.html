@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lab Living Technologies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+    /* FAQ Section Styles */
+    .faq-container {
+        max-width: 97%; /* Ensure full width within the container */
+        margin: 0 auto; /* Center the container */
+    }
+
+    .faq-item {
+        border: 1px solid #ddd;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        overflow: hidden;
+        width: 100%; /* Make FAQ items full-width */
+    }
+
+    .faq-question {
+        background-color: #424242; /* Default color for unclicked state */
+        color: white;
+        border: none;
+        padding: 15px;
+        text-align: left;
+        width: 100%; /* Ensure full width */
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 500;
+        outline: none;
+        position: relative;
+        transition: background-color 0.3s ease; /* Smooth transition */
+    }
+
+    .faq-question.clicked {
+        background-color: #ff6347; /* Color for clicked state */
+    }
+
+    .faq-answer {
+        display: none;
+        padding: 15px;
+        background-color: #fff;
+    }
+
+    .faq-answer.show {
+        display: block;
+    }
+
+    .arrow {
+        transition: transform 0.3s ease;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px; /* Adjust font size for visibility */
+    }
+
+    .arrow.up {
+        transform: rotate(180deg) translateY(-50%);
+    }
+
+    </style>
+</head>
+<body>
+  <div id="navbar">
+    <a href="index.html">Home</a>
+    <a href="form.html">Collaborate</a>
+    <a href="research.html">Research</a>
+    <a href="team.html">Team</a>
+    <a href="contact.html">Contact</a>
+    <a href="work.html">Our Work</a>
+</div>
+    <!-- Landing Section -->
+    <section id="landing">
+      <video autoplay muted loop id="bgVideo">
+          <source src="images/beads.mp4"
+              type="video/mp4">
+          Your browser does not support HTML5 video.
+      </video>
+    </section>
+    <!-- About Section -->
+    <section id="collaboration-board">
+        <div class="left-content-60">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What does living technologies entail?</span>
+                        <span class="arrow">&#9662;</span> <!-- Down arrow -->
+                    </div>
+                    <div class="faq-answer">
+                        <p>Living technologies refer to the integration of AI and advanced technologies with living cell systems to improve healthcare and biological research. This includes:</p>
+                        <ul>
+                            <li>Utilizing AI to analyze and interpret data from living cells.</li>
+                            <li>Automating processes such as cell assays and bioprinting.</li>
+                            <li>Creating complex multicellular 3D structures using bioprinting techniques.</li>
+                            <li>Applying insights from living cell technologies to develop personalized and regenerative treatments.</li>
+                        </ul>
+                        <p>These technologies aim to enhance our understanding of biology and to develop more effective and personalized medical treatments.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is the focus of the Health AI Lab Living Technologies?</span>
+                        <span class="arrow">&#9662;</span> <!-- Down arrow -->
+                    </div>
+                    <div class="faq-answer">
+                        <p>The Health AI Lab Living Technologies focuses on combining AI and living cell technologies to advance personalized, regenerative, and curative treatments. They work on automation, data analysis, and modeling to create impactful applications in biology and healthcare.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What are the current goals of the UMC Utrecht AI Lab for Living Technologies?</span>
+                        <span class="arrow">&#9662;</span> <!-- Down arrow -->
+                    </div>
+                    <div class="faq-answer">
+                        <p>The current goals include creating and utilizing AI-based technologies in microscopy, bioprinting, and automation. The lab uses living cell technologies derived from patients to advance early-stage biomedical research and to enhance personalized, regenerative, and curative treatments. By integrating new AI techniques with these technologies, they aim to significantly impact both basic research and clinical applications.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Are there other AI Labs at the UMC Utrecht?</span>
+                        <span class="arrow">&#9662;</span> <!-- Down arrow -->
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, the UMC Utrecht has several AI labs that focus on different aspects of AI and data science. The names of these labs are:</p>
+                        <ul>
+                            <li>AI Lab for Living Technologies</li>
+                            <li>AI Lab for Health and Biomedical Sciences</li>
+                            <li>AI Lab for Personalized Medicine</li>
+                            <li>AI Lab for Diagnostic Imaging</li>
+                            <li>AI Lab for Predictive Analytics</li>
+                        </ul>
+                        <p>These labs collaborate with public and private organizations as well as other knowledge institutions to tackle various societal issues related to AI and healthcare.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is the aim of the AI Labs program?</span>
+                        <span class="arrow">&#9662;</span> <!-- Down arrow -->
+                    </div>
+                    <div class="faq-answer">
+                        <p>The aim of the AI Labs program is to advance the integration of AI into daily healthcare, health research, and education. This involves:</p>
+                        <ul>
+                            <li>Establishing a collaborative 'AI in Health' community with Utrecht University (UU).</li>
+                            <li>Setting up multiple Health AI labs within the Utrecht Life Sciences community.</li>
+                            <li>Fostering long-term collaborations with national and international partners.</li>
+                            <li>Attracting and retaining data science and AI talent from both public and private sectors.</li>
+                        </ul>
+                        <p>This program is designed to push forward AI-driven healthcare innovations and ensure that AI and data science become integral parts of healthcare and research.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do AI technologies contribute to the lab’s research?</span>
+                        <span class="arrow">&#9662;</span> <!-- Down arrow -->
+                    </div>
+                    <div class="faq-answer">
+                        <p>AI technologies are used to extract valuable information from cellular images, provide real-time feedback for automating cell assays, and create complex multicellular 3D living structures through bioprinting. The lab’s AI scientists collaborate closely with biomedical researchers to develop and implement advanced AI techniques for data analysis and modeling in biology. They also focus on sharing best practices and offering education on using data and AI in fundamental and preclinical biology.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Who are the directors and coordinators of the AI Lab for Living Technologies?</span>
+                        <span class="arrow">&#9662;</span> <!-- Down arrow -->
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Directors:</strong><br><br>
+                        Prof. dr. Jeffrey J.M. Beekman (J.Beekman@umcutrecht.nl)<br>
+                        Prof. dr. Jos J. Malda (J.Malda@umcutrecht.nl)<br><br>
+                        <strong>Coordinators:</strong><br><br>
+                        Sam van Beuningen (S.vanBeuningen@umcutrecht.nl)<br>
+                        Joost van Duijn (J.H.vanDuijn-6@umcutrecht.nl)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <div class="right-content-30">
+        <h2>Is Your Question Not Listed?</h2>
+        <p>If you have a question that is not listed here, feel free to contact us through the form below. We will get back to you as soon as possible!</p>
+        <form id="addItemForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="itemName">Email:</label>
+            <input type="text" id="itemName" name="itemName" required><br>
+            <label for="itemDescription">Question:</label>
+            <textarea id="itemDescription" name="itemDescription" required></textarea><br>
+            <button type="submit" id="addItemButton">Send Question</button>
+        </form>
+        <div id="confirmationMessage" style="display:none;">Question Received!</div>
+      </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+      <div id="social-links">
+          <a href="https://www.umcutrecht.nl/en/ai-lab-for-living-technologies"><img src="images/umcu.png" alt="UMC Utrecht"></a>
+          <a href="https://github.com/Living-Technologies"><img src="images/github-white-trans.png" alt="GitHub"></a>
+          <a href="https://www.google.com/maps/place/Uppsalalaan+8,+3584+CT+Utrecht"><img src="images/location-white.png" alt="Location"></a>
+      </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const arrow = question.querySelector('.arrow');
+
+                // Toggle answer visibility
+                answer.classList.toggle('show');
+                
+                // Toggle question background color
+                faqQuestions.forEach(q => {
+                    if (q !== question) {
+                        q.classList.remove('clicked');
+                    }
+                });
+                question.classList.toggle('clicked');
+                
+                // Toggle arrow direction
+                if (answer.classList.contains('show')) {
+                    arrow.classList.add('up');
+                } else {
+                    arrow.classList.remove('up');
+                }
+            });
+        });
+    });
+
+  </script>
+</body>
+</html>
